@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Работа с элементами DOM</title>
+  <style>
+    #scrollButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Пример работы с элементами DOM</h1>
+  <p id="message">Привет, это пример работы с элементами DOM!</p>
+  <button id="changeStyleButton">Изменить стиль кнопки</button>
+  <script>
+    // Обращение к первому дочернему элементу <body>
+    var firstChildElement = document.body.firstElementChild;
+    console.log(firstChildElement);
+
+
+    // Изменение стилевого оформления кнопки по нажатию
+    var changeStyleButton = document.getElementById('changeStyleButton');
+    document.addEventListener('DOMContentLoaded', function() {
+      var changeStyleButton = document.getElementById('changeStyleButton');
+      changeStyleButton.addEventListener('click', function() {
+        var scrollButton = document.getElementById('scrollButton');
+        scrollButton.style.backgroundColor = 'blue';
+        scrollButton.style.color = 'white';
+        console.log('Стиль кнопки изменен');
+      });
+    });
+
+    // Пользовательский ввод для изменения стилевого оформления
+    var userInput = prompt('Введите значения свойств для изменения стиля кнопки:');
+    var userStyles = userInput.split(',');
+
+    if (userStyles.length === 2) {
+      scrollButton.style[userStyles[0]] = userStyles[1];
+      console.log('Стиль кнопки изменен в соответствии с введенными значениями');
+    } else {
+      console.log('Некорректный ввод');
+    }
+
+    //scroll кнопка
+    window.addEventListener('scroll', function() {
+      var scrollButton = document.getElementById('scrollButton');
+      if (window.pageYOffset > 200) {
+        scrollButton.style.display = 'block';
+      } else {
+        scrollButton.style.display = 'none';
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var scrollButton = document.createElement('button');
+      scrollButton.id = 'scrollButton';
+      scrollButton.textContent = 'Прокрутить вверх';
+      scrollButton.addEventListener('click', scrollToTop);
+      document.body.appendChild(scrollButton);
+    });
+  </script>
+
+<section class="services-section">
+    <div class="container">
+        <div class="sections-top-content">
+            <h3 class="sections-heading text-center">Our Services</h3>
+            <p class="sections-para">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br>blanditiis praesentium</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="services-container-detail">
+                    <div class="services-detail-list">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="../Итоговая/images/img-8.png" alt="IMG"></a></li>
+                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><img src="../Итоговая/images/img-9.png" alt="IMG"></a></li>
+                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><img src="../Итоговая/images/img-10.png" alt="IMG"></a></li>
+                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><img src="../Итоговая/images/img-11.png" alt="IMG"></a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="services-detail-text">
+                                <h4>Graphic Design</h4>
+                                <p class="text-large">At vero eos et accusamus et <span class="text-green text-bold">iusto</span> odio dignissimos <span class="text-grey text-bold">ducimus</span> qui blanditiis praesentium voluptatum deleniti</p>
+                                <p class="text-small">quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, <span class="text-green text-bold">similique sunt</span> in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="services-detail-text">
+                                <p class="text-large">At vero eos et accusamus et <span class="text-green text-bold">iusto</span> odio dignissimos <span class="text-grey text-bold">ducimus</span> qui blanditiis praesentium voluptatum deleniti</p>
+                                <p class="text-small">quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, <span class="text-green text-bold">similique sunt</span> in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="services-detail-text">
+                                <p class="text-large">At vero eos et accusamus et <span class="text-green text-bold">iusto</span> odio dignissimos <span class="text-grey text-bold">ducimus</span> qui blanditiis praesentium voluptatum deleniti</p>
+                            </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="services-detail-text">
+                                <h4>Graphic Design</h4>
+                                <p class="text-large">At vero eos et accusamus et <span class="text-green text-bold">iusto</span> odio dignissimos <span class="text-grey text-bold">ducimus</span> qui blanditiis praesentium voluptatum deleniti</p>
+                                <p class="text-small">quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, <span class="text-green text-bold">similique sunt</span> in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="services-container-progress">
+                    <ul>
+                        <li><a href="#"><img src="../Итоговая/images/img-12.png" alt="IMG"><span class="progree-text">Branding</span></a></li>
+                        <li><a href="#"><img src="../Итоговая/images/img-12.png" alt="IMG"><span class="progree-text">Web Design</span></a></li>
+                        <li><a href="#"><img src="../Итоговая/images/img-14.png" alt="IMG"><span class="progree-text">Linux</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="services-section">
+    <div class="container">
+        <div class="sections-top-content">
+            <h3 class="sections-heading text-center">Our Services</h3>
+            <p class="sections-para">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br>blanditiis praesentium</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="services-container-detail">
+                    <div class="services-detail-list">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="../Итоговая/images/img-8.png" alt="IMG"></a></li>
+                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><img src="../Итоговая/images/img-9.png" alt="IMG"></a></li>
+                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><img src="../Итоговая/images/img-10.png" alt="IMG"></a></li>
+                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><img src="../Итоговая/images/img-11.png" alt="IMG"></a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="services-detail-text">
+                                <h4>Graphic Design</h4>
+                                <p class="text-large">At vero eos et accusamus et <span class="text-green text-bold">iusto</span> odio dignissimos <span class="text-grey text-bold">ducimus</span> qui blanditiis praesentium voluptatum deleniti</p>
+                                <p class="text-small">quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, <span class="text-green text-bold">similique sunt</span> in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="services-detail-text">
+                                <p class="text-large">At vero eos et accusamus et <span class="text-green text-bold">iusto</span> odio dignissimos <span class="text-grey text-bold">ducimus</span> qui blanditiis praesentium voluptatum deleniti</p>
+                                <p class="text-small">quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, <span class="text-green text-bold">similique sunt</span> in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="services-detail-text">
+                                <p class="text-large">At vero eos et accusamus et <span class="text-green text-bold">iusto</span> odio dignissimos <span class="text-grey text-bold">ducimus</span> qui blanditiis praesentium voluptatum deleniti</p>
+                            </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="services-detail-text">
+                                <h4>Graphic Design</h4>
+                                <p class="text-large">At vero eos et accusamus et <span class="text-green text-bold">iusto</span> odio dignissimos <span class="text-grey text-bold">ducimus</span> qui blanditiis praesentium voluptatum deleniti</p>
+                                <p class="text-small">quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, <span class="text-green text-bold">similique sunt</span> in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="services-container-progress">
+                    <ul>
+                        <li><a href="#"><img src="../Итоговая/images/img-12.png" alt="IMG"><span class="progree-text">Branding</span></a></li>
+                        <li><a href="#"><img src="../Итоговая/images/img-12.png" alt="IMG"><span class="progree-text">Web Design</span></a></li>
+                        <li><a href="#"><img src="../Итоговая/images/img-14.png" alt="IMG"><span class="progree-text">Linux</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

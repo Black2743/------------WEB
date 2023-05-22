@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Скрайбинг с использованием jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      // Получение текстового содержимого элемента
+      var elementText = $('#elementId').text();
+      console.log('Текстовое содержимое элемента: ' + elementText);
+
+      // Изменение текстового содержимого элемента
+      $('#elementId').text('Новый текст');
+
+      // Получение HTML-содержимого элемента
+      var elementHtml = $('#elementId').html();
+      console.log('HTML-содержимое элемента: ' + elementHtml);
+
+      // Изменение HTML-содержимого элемента
+      $('#elementId').html('<p>Новый HTML-код</p>');
+
+      // Изменение атрибута элемента
+      $('#elementId').attr('title', 'Новый заголовок');
+
+      // Добавление класса к элементу
+      $('#elementId').addClass('highlight');
+
+      // Проверка наличия класса у элемента
+      var hasClass = $('#elementId').hasClass('highlight');
+      console.log('Наличие класса highlight: ' + hasClass);
+
+      // Изменение стиля элемента
+      $('#elementId').css('font-size', '20px');
+
+      // Скрытие элемента
+      $('#elementId').hide();
+
+      // Отображение скрытого элемента
+      $('#elementId').show();
+
+      // Изменение содержимого элемента с анимацией
+      $('#elementId').fadeOut(1000, function() {
+        $(this).text('Новый текст').fadeIn(1000);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Скрайбинг с использованием jQuery</h1>
+  <p id="elementId">Исходный текст</p>
+</body>
+</html>
