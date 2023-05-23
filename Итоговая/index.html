@@ -27,7 +27,7 @@
 			    </div>
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav navbar-right">
-			        <li class="active"><a href="#">Hello <span class="sr-only">(current)</span></a></li>
+			        <li><a href="#">Hello</a></li>
 			        <li><a href="#">About</a></li>
 			        <li><a href="#">Services</a></li>
 			        <li><a href="#">Portfolio</a></li>
@@ -42,15 +42,23 @@
 		<div class="banner-middle">
 			<h1>We Are Code Cafe</h1>
 			<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis <br>praesentium voluptatum</p>
-			<span>
-				<a href="#"><img src="images/img-41.png" alt="IMG"></a>
+			
+			<span id="scrollID1" onclick="scrollToBottom()">
+					<a><img src="images/img-41.png" alt="IMG"></a>
 			</span>
+			<script>
+				function scrollToBottom() {
+				  var scrollButton = document.getElementById("scrollID1");
+				  var bottomElement = document.documentElement; 
+			
+				  bottomElement.scrollIntoView({ behavior: "smooth", block: "end" });
+			
+				}
+			  </script>
 		</div>
 
 	</div>
-	<!-- /.banner-block -->
-
-	<!-- /.bouncy-section -->
+	
 	<section class="bouncy-section">
 		<div class="container">
 			<div class="row">
@@ -264,21 +272,21 @@
 						    	<div class="element transition metal    isotope-item" data-symbol="Hg" data-category="transition" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(5px, 5px, 0px);">
 						      	<div id="projects-1">
 						      		<div class="project-one">
-						        		<img class="dummy" src="images/img-1.png" alt="IMG">
+						        		<img class="dummy" src="./images/img-1.png" alt="IMG">
 						      		</div>
 						    		</div>
 						     	</div>       
 						      <div class="element metalloid    isotope-item" data-symbol="Te" data-category="metalloid" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(125px, 5px, 0px) scale3d(1, 1, 1); opacity: 1;">
 						      	<div id="projects-2">
 						        	<div class="project-one">
-						        		<img class="dummy" src="images/img-17.png" alt="IMG">
+						        		<img class="dummy" src="./images/img-17.png" alt="IMG">
 						          </div>
 						        </div>
 						      </div>      
 						      <div class="element post-transition metal    isotope-item" data-symbol="Bi" data-category="post-transition" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(245px, 5px, 0px) scale3d(1, 1, 1); opacity: 1;">
 						      	<div id="projects-3">
 						        	<div class="project-one">
-						        		<img class="dummy" src="images/img-18.png" alt="IMG">
+						        		<img class="dummy" src="./images/img-18.png" alt="IMG">
 						          </div>
 						        </div>
 						      </div>      
@@ -741,7 +749,7 @@
 					    <input type="text" class="form-control" id="exampleInputName2" placeholder="Your Name">
 					  </div>
 					  <div class="form-group form-fields">
-					    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+					    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email Address">
 					  </div>
 					  <div class="form-group form-fields form-right-padding">
 					    <input type="text" class="form-control" id="exampleInputEmail4" placeholder="Subject">
@@ -783,7 +791,7 @@
 						<span class="footer-logo">
 							<a href="#"><img src="images/img-51.png" alt="IMG"></a>
 						</span>
-						<p>Copyright 2015. All rights Reserved</p>
+						<p>Copyright 2023. All rights Reserved</p>
 						<ul>
 							<li><a class="facebook-icon" href="#"><img src="images/img-46.png" alt="IMG"></a></li>
 							<li><a class="twitter-icon" href="#"><img src="images/img-47.png" alt="IMG"></a></li>
@@ -800,14 +808,9 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-1.8.0.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery-1.8.0.min.js"></script>
 <script src="./js/jquery.isotope.min.js"></script>
-<script type="text/javascript">
-	$('.carousel').carousel({
-  interval: 3000
-	})
-</script>
 <script>
   $(function(){
     

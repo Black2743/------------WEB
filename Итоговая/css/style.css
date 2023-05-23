@@ -1,116 +1,51 @@
 @font-face {
   font-family: "source_sans_probold";
-  src: url("../fonts/source sans pro/sourcesanspro-bold-webfont.eot");
-  src: url("../fonts/source sans pro/sourcesanspro-bold-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/source sans pro/sourcesanspro-bold-webfont.woff2")
-      format("woff2"),
-    url("../fonts/source sans pro/sourcesanspro-bold-webfont.woff")
-      format("woff"),
-    url("../fonts/source sans pro/sourcesanspro-bold-webfont.ttf")
-      format("truetype"),
-    url("../fonts/source sans pro/sourcesanspro-bold-webfont.svg#source_sans_probold")
-      format("svg");
+  src: url("../fonts/source sans pro/SourceSansPro-Bold.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "source_sans_prolight";
-  src: url("../fonts/source sans pro/sourcesanspro-light-webfont.eot");
-  src: url("../fonts/source sans pro/sourcesanspro-light-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/source sans pro/sourcesanspro-light-webfont.woff2")
-      format("woff2"),
-    url("../fonts/source sans pro/sourcesanspro-light-webfont.woff")
-      format("woff"),
-    url("../fonts/source sans pro/sourcesanspro-light-webfont.ttf")
-      format("truetype"),
-    url("../fonts/source sans pro/sourcesanspro-light-webfont.svg#source_sans_prolight")
-      format("svg");
+  src: url("../fonts/source sans pro/SourceSansPro-Light.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "source_sans_proregular";
-  src: url("../fonts/source sans pro/sourcesanspro-regular-webfont.eot");
-  src: url("../fonts/source sans pro/sourcesanspro-regular-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/source sans pro/sourcesanspro-regular-webfont.woff2")
-      format("woff2"),
-    url("../fonts/source sans pro/sourcesanspro-regular-webfont.woff")
-      format("woff"),
-    url("../fonts/source sans pro/sourcesanspro-regular-webfont.ttf")
-      format("truetype"),
-    url("../fonts/source sans pro/sourcesanspro-regular-webfont.svg#source_sans_proregular")
-      format("svg");
+  src: url("../fonts/source sans pro/SourceSansPro-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "source_sans_prosemibold";
-  src: url("../fonts/source sans pro/sourcesanspro-semibold-webfont.eot");
-  src: url("../fonts/source sans pro/sourcesanspro-semibold-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/source sans pro/sourcesanspro-semibold-webfont.woff2")
-      format("woff2"),
-    url("../fonts/source sans pro/sourcesanspro-semibold-webfont.woff")
-      format("woff"),
-    url("../fonts/source sans pro/sourcesanspro-semibold-webfont.ttf")
-      format("truetype"),
-    url("../fonts/source sans pro/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold")
-      format("svg");
+  src: url("../fonts/source sans pro/SourceSansPro-SemiBold.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "open_sansbold";
-  src: url("../fonts/open sans/opensans-bold-webfont.eot");
-  src: url("../fonts/open sans/opensans-bold-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/open sans/opensans-bold-webfont.woff2") format("woff2"),
-    url("../fonts/open sans/opensans-bold-webfont.woff") format("woff"),
-    url("../fonts/open sans/opensans-bold-webfont.ttf") format("truetype"),
-    url("../fonts/open sans/opensans-bold-webfont.svg#open_sansbold")
-      format("svg");
+  src: url("../fonts/open sans/OpenSans-Bold.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "open_sanslight";
-  src: url("../fonts/open sans/opensans-light-webfont.eot");
-  src: url("../fonts/open sans/opensans-light-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/open sans/opensans-light-webfont.woff2") format("woff2"),
-    url("../fonts/open sans/opensans-light-webfont.woff") format("woff"),
-    url("../fonts/open sans/opensans-light-webfont.ttf") format("truetype"),
-    url("../fonts/open sans/opensans-light-webfont.svg#open_sanslight")
-      format("svg");
+  src: url("../fonts/open sans/OpenSans-Light.ttf");
+
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "open_sansregular";
-  src: url("../fonts/open sans/opensans-regular-webfont.eot");
-  src: url("../fonts/open sans/opensans-regular-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/open sans/opensans-regular-webfont.woff2") format("woff2"),
-    url("../fonts/open sans/opensans-regular-webfont.woff") format("woff"),
-    url("../fonts/open sans/opensans-regular-webfont.ttf") format("truetype"),
-    url("../fonts/open sans/opensans-regular-webfont.svg#open_sansregular")
-      format("svg");
+  src: url("../fonts/open sans/OpenSans-Regular.ttf");
+
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "open_sanssemibold";
-  src: url("../fonts/open sans/opensans-semibold-webfont.eot");
-  src: url("../fonts/open sans/opensans-semibold-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/open sans/opensans-semibold-webfont.woff2") format("woff2"),
-    url("../fonts/open sans/opensans-semibold-webfont.woff") format("woff"),
-    url("../fonts/open sans/opensans-semibold-webfont.ttf") format("truetype"),
-    url("../fonts/open sans/opensans-semibold-webfont.svg#open_sanssemibold")
-      format("svg");
+  src: url("../fonts/open sans/OpenSans-SemiBold.ttf");
+
   font-weight: normal;
   font-style: normal;
 }
@@ -805,8 +740,7 @@ header .navbar-collapse {
 }
 .news-section .news-detail {
   display: block;
-  padding-top: 70px;
-  padding-left: 70px;
+
 }
 .news-section .news-detail h4 {
   font-size: 20px;
@@ -1241,6 +1175,11 @@ footer .footer-detail ul li .vimeo-icon {
   .contact-section .contact-detail {
     min-height: 144px;
   }
+  .services-container-detail, .services-section{
+    align-items: center;
+  }
+
+
 }
 @media (max-width: 991px) {
   .impressed-section .impressed-section-image {
@@ -1253,6 +1192,63 @@ footer .footer-detail ul li .vimeo-icon {
   .contact-section .contact-detail {
     min-height: 0px;
   }
+  .bouncy-section{
+    align-items: center;
+    text-align: center;
+  }
+  .detail-container.container-left{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .detail-container.container-right{
+    text-align: center;
+    margin-top: 0;
+  }
+  .services-container-detail{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  #container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .services-detail-list,.services-container-detail,.impressed-section-detail{
+    align-items: center;
+    text-align: center;
+  }
+  .tab-content{
+    align-items: center;
+  }
+  .team-section-img{
+    display: flex;
+    flex-direction: column;
+    width: 3%;
+  }
+  .team-section-detail, .team-performance, .testimonial-container{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+   .news-section{
+    align-items: center;
+    text-align: center;
+    padding-left:0  !important;
+  }
+  .price-detail-list li{
+    text-align: center !important;
+    align-items: center;
+  }
+  .services-section .services-detail-text{
+    width: 100% !important;
+    align-items: center;
+  }
+
+
 }
 @media (max-width: 768px) {
   .services-section .services-detail-list,

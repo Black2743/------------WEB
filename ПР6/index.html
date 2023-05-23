@@ -4,7 +4,6 @@
     <title>Manipulating Elements with jQuery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-      /* CSS для анимации */
       .animated {
         animation-duration: 3s;
         animation-fill-mode: forwards;
@@ -38,15 +37,12 @@
     </style>
     <script>
       $(document).ready(function () {
-        // Получение атрибута href ссылки из класса .www
         var hrefFromClass = $(".www").attr("href");
         console.log("Атрибут href ссылки из класса .www:", hrefFromClass);
 
-        // Получение атрибута href первой ссылки
         var firstHref = $("a:first").attr("href");
         console.log("Атрибут href первой ссылки:", firstHref);
 
-        // Получение атрибута href всех ссылок и последовательный вывод в модальном окне
         var allHref = "";
         $("a").each(function () {
           var href = $(this).attr("href");
@@ -54,105 +50,78 @@
         });
         alert(allHref);
 
-        // Замена href каждой ссылки на '!'
         $("a").attr("href", "!");
 
-        // Добавление атрибута target='_blank' каждой ссылке
         $("a").attr("target", "_blank");
 
-        // Замена содержимого каждой ссылки (анкоры) на их href
         $("a").each(function () {
           var href = $(this).attr("href");
           $(this).text(href);
         });
 
-        // Вставка после содержимого каждой ссылки их href в круглых скобках
         $("a").each(function () {
           var href = $(this).attr("href");
           $(this).after("(" + href + ")");
         });
 
-        // Вставка в атрибут title каждой ссылки ее анкора
         $("a").each(function () {
           var anchor = $(this).text();
           $(this).attr("title", anchor);
         });
 
-        // Добавление класса test всем li
         $("li").addClass("test");
 
-        // Удаление класса www у li
         $("li").removeClass("www");
 
-        // Добавление класса www всем li, если его нет, и удаление, если есть
         $("li").toggleClass("www");
 
-        // Проверка, что хотя бы одна из ссылок имеет класс www
         var hasClassWww = $("a").hasClass("www");
         console.log("Хотя бы одна ссылка имеет класс www:", hasClassWww);
 
-        // Вывод value инпута с классом in
         var inputValue = $(".in").val();
         console.log("Value инпута с классом in:", inputValue);
 
-        // Вывод содержимого textarea с классом text
         var textareaContent = $(".text").val();
         console.log("Содержимое textarea с классом text:", textareaContent);
 
-        // Последовательный вывод value каждого инпута
         $("input").each(function () {
           var value = $(this).val();
           console.log("Value инпута:", value);
         });
 
-        // Установка value всех инпутов в '!'
         $("input").val("!");
 
-        // Обертка каждого <h2> в <div>
         $("h2").wrap("<div></div>");
 
-        // Обертка каждого <h2> в <div> с классом test
         $("h2").wrap('<div class="test"></div>');
 
-        // Обертка каждого <h2> внутри в <i>
         $("h2").wrapInner("<i></i>");
 
-        // Обертка всех <h2> в один <i>
         $("h2").wrapAll("<i></i>");
 
-        // Поиск абзацев <p> обернутых дивами <div> и удаление этих дивов
         $("div > p").unwrap();
 
-        // Вставка перед каждым <h2> '<p>!</p>'
         $("h2").before("<p>!</p>");
 
-        // Вставка после каждого <h2> '<p>?</p>'
         $("h2").after("<p>?</p>");
 
-        // Вставка в начале каждого <h2> '!'
         $("h2").prepend("!");
 
-        // Вставка в конце каждого <h2> '?'
         $("h2").append("?");
 
-        // Замена каждого <h2> на его содержимое
         $("h2").replaceWith(function () {
           return $(this).html();
         });
 
-        // Сделать все <h2> пустыми
         $("h2").empty();
 
-        // Удаление всех <h2>
         $("h2").remove();
       });
 
-      // Анимация текста при загрузке страницы
       $(window).on("load", function () {
         $("h1").addClass("animated fadeIn");
       });
 
-      // Анимация текста при наведении
       $(document).on("mouseover", "p", function () {
         $(this).addClass("animated slideIn");
       });
