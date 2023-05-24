@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Валидация формы с помощью jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+        //нужно доделать
+      $('#exchange-form').submit(function(event) {
+        event.preventDefault(); 
+        $('.error').remove();
+
+        var valid = true;
+
+        var name = $('#name').val();
+        if (name === '') {
+          $('#name').after('<span class="error">Введите ваше имя</span>');
+          valid = false;
+        }
+
+        var email = $('#email').val();
+        if (email === '') {
+          $('#email').after('<span class="error">Введите ваш email</span>');
+          valid = false;
+        } else if (!isValidEmail(email)) {
+          $('#email').after('<span class="error">Введите корректный email</span>');
+          valid = false;
+        }
+
+        var phone = $('#phone').val();
+        if (phone === '') {
+          $('#phone').after('<span class="error">Введите ваш телефон</span>');
+          valid = false;
+        }
+
+        var message = $('#message').val();
+        if (message === '') {
+          $('#message').after('<span class="error">Введите ваше сообщение</span>');
+          valid = false;
+        }
+
+        if (valid) {
+          this.submit();
+        }
+      });
+
+      function isValidEmail(email) {
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+      }
+    });
+  </script>
+</head>
+<body>
+  <form id="exchange-form">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="phone">Телефон:</label>
+    <input type="text" id="phone" name="phone">
+
+    <label for="message">Сообщение:</label>
+    <textarea id="message" name="message"></textarea>
+
+    <input type="submit" value="Отправить">
+  </form>
+</body>
+</html>

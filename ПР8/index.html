@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ПР8</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('li').click(function() {
+            $(this).children('ul').slideToggle();
+        });
+        });
+    </script>
+</head>
+<body>
+    <li>Элемент 1
+        <ul>
+          <li>Вложенный элемент 1</li>
+          <li>Вложенный элемент 2</li>
+        </ul>
+    </li>
+    <li>Элемент 2
+        <ul>
+          <li>Вложенный элемент 1</li>
+          <li>Вложенный элемент 2</li>
+        </ul>
+    </li>
+    <li>Элемент 3
+        <ul>
+          <li>Вложенный элемент 1</li>
+          <li>Вложенный элемент 2</li>
+        </ul>
+    </li>
+</body>
+</html>
